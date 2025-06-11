@@ -37,19 +37,23 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
+
+        td_soft_hard_ru: td_soft_hard_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SOFT_HARD_RU";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
+
+            tapping-term-ms = <500>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        kha {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
-        };
-
-        hrdsgn {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+        russian {
+            bindings = <&tog 1>;
+            key-positions = <10 32>;
         };
     };
 
@@ -58,10 +62,19 @@
 
         base {
             bindings = <
-  &kp A        &kp W        &kp E         &kp R          &kp T                          &kp Y  &kp U         &kp I         &kp O        &kp P
+  &kp Q        &kp W        &kp E         &kp R          &kp T                          &kp Y  &kp U         &kp I         &kp O        &kp P
   &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                          &kp H  &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr RGUI SEMICOLON
   &kp Z        &kp X        &kp C         &kp V          &kp B                          &kp N  &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                          &kp BACKSPACE  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp TAB
+                                          &kp BACKSPACE  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp TAB
+            >;
+        };
+
+        base_ru {
+            bindings = <
+  &kp RU_CYRILLIC_SHORT_I  &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans  &trans
+  &trans                   &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans  &trans
+  &trans                   &trans  &trans  &trans  &trans                    &trans  &td_soft_hard_ru  &trans  &trans  &trans
+                                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -70,7 +83,7 @@
   &kp N1         &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6           &kp N7           &kp N8           &kp N9        &kp N0
   &hml LGUI ESC  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ENTER                     &kp PRINTSCREEN  &hmr RCTRL LEFT  &hmr RSHFT DOWN  &hmr LALT UP  &hmr RGUI RIGHT
   &none          &kp HOME  &kp INS    &kp END    &kp DELETE                    &kp CAPS         &none            &kp PG_DN        &kp PG_UP     &none
-                                      &trans     &trans      &trans    &trans  &mo 3            &trans
+                                      &trans     &trans      &trans    &trans  &mo 4            &trans
             >;
         };
 
@@ -79,7 +92,7 @@
   &none           &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &none
   &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
   &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &none                        &none      &kp PIPE         &kp TILDE        &kp AMPS        &kp DLLR
-                                                    &trans           &mo 3      &trans    &trans  &trans     &trans
+                                                    &trans           &mo 4      &trans    &trans  &trans     &trans
             >;
         };
 
