@@ -38,13 +38,25 @@
             hold-trigger-on-release;
         };
 
-        td_soft_hard_ru: td_soft_hard_ru {
+        td_softhard_ru: td_softhard_ru {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SOFT_HARD_RU";
+            label = "TD_SOFTHARD_RU";
             #binding-cells = <0>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
+        };
 
-            tapping-term-ms = <500>;
+        td_shascha_ru: td_shascha_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SHASCHA_RU";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_SHA>, <&kp RU_CYRILLIC_SHCHA>;
+        };
+
+        td_ieio_ru: td_ieio_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_IEIO_RU";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
         };
     };
 
@@ -71,9 +83,9 @@
 
         base_ru {
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &trans  &trans  &trans
-  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &trans              &trans               &trans  &trans  &trans
-  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &trans              &td_soft_hard_ru     &trans  &trans  &trans
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &td_ieio_ru                                 &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE       &td_shascha_ru              &kp RU_CYRILLIC_ZE        &kp RU_CYRILLIC_HA
+  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hml RCTRL RU_CYRILLIC_O  &hml RSHIFT RU_CYRILLIC_EL  &hml LALT RU_CYRILLIC_DE  &hml RGUI RU_CYRILLIC_ZHE
+  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &td_softhard_ru           &kp RU_CYRILLIC_BE          &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
                                                                                    &kp BACKSPACE             &mo 2               &kp SPACE    &kp ENTER  &mo 3               &kp TAB
             >;
         };
