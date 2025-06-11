@@ -63,14 +63,48 @@
     combos {
         compatible = "zmk,combos";
 
-        to_tu {
-            bindings = <&to 1>;
+        to_ru {
+            bindings = <&layer_ru>;
             key-positions = <10 32>;
+            layers = <0>;
         };
 
-        to_ru {
-            bindings = <&kp LG(SPACE)>;
+        to_en {
+            bindings = <&layer_en>;
             key-positions = <10 32>;
+            layers = <1>;
+        };
+
+        change_l {
+            bindings = <&change_lang>;
+            key-positions = <5 6>;
+        };
+    };
+
+    macros {
+        change_lang: change_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>;
+            label = "CHANGE_LANG";
+        };
+
+        layer_ru: layer_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &change_lang>;
+            label = "LAYER_RU";
+            wait-ms = <10>;
+            tap-ms = <1>;
+        };
+
+        layer_en: layer_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &change_lang>;
+            label = "LAYER_EN";
+            wait-ms = <10>;
+            tap-ms = <1>;
         };
     };
 
