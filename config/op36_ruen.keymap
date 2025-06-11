@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
     };
