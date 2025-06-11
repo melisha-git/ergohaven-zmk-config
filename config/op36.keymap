@@ -74,11 +74,6 @@
             key-positions = <10 32>;
             layers = <1>;
         };
-
-        change_l {
-            bindings = <&change_lang>;
-            key-positions = <5 6>;
-        };
     };
 
     macros {
@@ -111,9 +106,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&to_en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&change_lang &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 10>,
-                <&to_ru>,
+                <&change_lang>,
                 <&macro_wait_time 10>;
 
             label = "EN";
@@ -137,7 +132,7 @@
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &td_ieio_ru                                 &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE       &td_shascha_ru              &kp RU_CYRILLIC_ZE        &kp RU_CYRILLIC_HA
   &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hml RCTRL RU_CYRILLIC_O  &hml RSHIFT RU_CYRILLIC_EL  &hml LALT RU_CYRILLIC_DE  &hml RGUI RU_CYRILLIC_ZHE
   &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &td_softhard_ru           &kp RU_CYRILLIC_BE          &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
-                                                                                   &kp BACKSPACE             &mo 2               &kp SPACE    &kp ENTER  &mo 3               &kp TAB
+                                                                                   &kp BACKSPACE             &mo 2               &kp SPACE    &kp ENTER  &mo 4               &kp TAB
             >;
         };
 
@@ -146,16 +141,25 @@
   &kp N1         &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6           &kp N7           &kp N8           &kp N9        &kp N0
   &hml LGUI ESC  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ENTER                     &kp PRINTSCREEN  &hmr RCTRL LEFT  &hmr RSHFT DOWN  &hmr LALT UP  &hmr RGUI RIGHT
   &none          &kp HOME  &kp INS    &kp END    &kp DELETE                    &kp CAPS         &none            &kp PG_DN        &kp PG_UP     &none
-                                      &trans     &trans      &trans    &trans  &mo 4            &trans
+                                      &trans     &trans      &trans    &trans  &mo 5            &trans
             >;
         };
 
-        sym {
+        sym_eng {
             bindings = <
-  &none           &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &none
-  &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
-  &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &none                        &none      &kp PIPE         &kp TILDE        &kp AMPS        &kp DLLR
-                                                    &trans           &mo 4      &trans    &trans  &trans     &trans
+  &none     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp LBKT  &kp UNDER  &kp RBKT  &none
+  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL
+  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &none                        &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DLLR
+                                 &trans    &mo 5      &trans    &trans  &trans     &trans
+            >;
+        };
+
+        sym_ru {
+            bindings = <
+  &none     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &kp CARET  &kp LBKT  &kp UNDER  &kp RBKT  &none
+  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &kp SEMI   &en RBRC  &kp EXCL
+  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &none                        &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DLLR
+                                 &trans    &mo 5      &trans    &trans  &trans     &trans
             >;
         };
 
