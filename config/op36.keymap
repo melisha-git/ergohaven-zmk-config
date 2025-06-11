@@ -71,10 +71,10 @@
 
         base_ru {
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I  &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans  &trans
-  &trans                   &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans  &trans
-  &trans                   &trans  &trans  &trans  &trans                    &trans  &td_soft_hard_ru  &trans  &trans  &trans
-                                           &trans  &trans  &trans    &trans  &trans  &trans
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &trans  &trans  &trans
+  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &trans              &trans               &trans  &trans  &trans
+  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &trans              &td_soft_hard_ru     &trans  &trans  &trans
+                                                                                   &kp BACKSPACE             &mo 2               &kp SPACE    &kp ENTER  &mo 3               &kp TAB
             >;
         };
 
