@@ -63,8 +63,13 @@
     combos {
         compatible = "zmk,combos";
 
-        russian {
-            bindings = <&tog 1>;
+        to_tu {
+            bindings = <&to 1>;
+            key-positions = <10 32>;
+        };
+
+        to_ru {
+            bindings = <&kp LG(SPACE)>;
             key-positions = <10 32>;
         };
     };
