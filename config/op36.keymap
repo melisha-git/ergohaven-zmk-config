@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     quick-tap-ms = <200>;
@@ -57,6 +58,12 @@
             label = "TD_IEIO_RU";
             #binding-cells = <0>;
             bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
+        };
+
+        mk: mk {
+            compatible = "zmk,behavior-mouse-key-press";
+            label = "MK";
+            #binding-cells = <1>;
         };
     };
 
@@ -143,10 +150,10 @@
 
         nav {
             bindings = <
-  &kp N1         &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6           &kp N7           &kp N8           &kp N9        &kp N0
-  &hml LGUI ESC  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ENTER                     &kp PRINTSCREEN  &hmr RCTRL LEFT  &hmr RSHFT DOWN  &hmr LALT UP  &hmr RGUI RIGHT
-  &none          &kp HOME  &kp INS    &kp END    &kp DELETE                    &kp CAPS         &none            &kp PG_DN        &kp PG_UP     &none
-                                      &trans     &trans      &trans    &trans  &mo 5            &trans
+  &kp N1         &kp N2    &kp N3    &kp N4   &kp N5                             &kp N6           &kp N7          &kp N8          &kp N9        &kp N0
+  &hml LGUI ESC  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT_ARROW                    &kp PRINTSCREEN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+  &msc SCRL_UP   &kp HOME  &kp INS   &kp END  &mkp LCLK                          &mkp RCLK        &kp CAPS        &kp PG_DN       &kp PG_UP     &msc SCRL_DOWN
+                                     &trans   &trans           &trans    &trans  &mo 5            &trans
             >;
         };
 
