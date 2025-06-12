@@ -65,6 +65,27 @@
             label = "MK";
             #binding-cells = <1>;
         };
+
+        td_quotes_left: td_quotes_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTES_LEFT";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp LBKT>;
+        };
+
+        td_quotes_right: td_quotes_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTES_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp RBKT>;
+        };
+
+        td: td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>;
+        };
     };
 
     combos {
@@ -159,9 +180,9 @@
 
         sym_eng {
             bindings = <
-  &none     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                      &kp CARET  &kp LBKT  &kp UNDER  &kp RBKT  &none
-  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL
-  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &kp AT_SIGN                    &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DLLR
+  &none     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                      &kp CARET  &td_quotes_left  &kp UNDER  &td_quotes_right  &none
+  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC         &kp SEMI   &kp RBRC          &kp EXCL
+  &kp HASH  &kp STAR  &kp COLON  &kp FSLH  &kp AT_SIGN                    &none      &kp PIPE         &kp TILDE  &kp AMPS          &kp DLLR
                                  &trans    &mo 5        &trans    &trans  &trans     &trans
             >;
         };
