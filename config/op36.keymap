@@ -83,8 +83,8 @@
         td: td {
             compatible = "zmk,behavior-tap-dance";
             label = "TD";
-            #binding-cells = <0>;
-            bindings = <&none>, <&none>;
+            #binding-cells = <1>;
+            bindings = <&kp MACRO_PLACEHOLDER>, <&kp MACRO_PLACEHOLDER>;
         };
     };
 
