@@ -105,13 +105,10 @@
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&change_lang &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 10>,
-                <&change_lang>,
-                <&macro_wait_time 10>;
-
+            bindings = <&change_lang &macro_param_1to1 &kp MACRO_PLACEHOLDER &change_lang>;
             label = "EN";
+            tap-ms = <1>;
+            wait-ms = <2>;
         };
     };
 
