@@ -223,10 +223,10 @@
 
         sym_eng {
             bindings = <
-  &bt BT_CLR  &kp EQUAL  &kp LT         &kp GT    &kp GRAVE                    &kp CARET     &td_quotes_left  &td_quotes_right  &kp UNDER   &none
-  &kp FSLH    &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT     &kp SQT          &kp DQT           &td_colons  &td_exq
-  &kp HASH    &kp STAR   &en RU_NUMERO  &kp BSLH  &kp AT                       &td_dotcomma  &kp PIPE         &kp TILDE         &kp AMPS    &kp DLLR
-                                        &trans    &mo 5      &trans    &trans  &trans        &trans
+  &none     &kp EQUAL  &kp LT         &kp GT    &kp GRAVE                    &kp CARET     &td_quotes_left  &td_quotes_right  &kp UNDER   &none
+  &kp FSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT     &kp SQT          &kp DQT           &td_colons  &td_exq
+  &kp HASH  &kp STAR   &en RU_NUMERO  &kp BSLH  &kp AT                       &td_dotcomma  &kp PIPE         &kp TILDE         &kp AMPS    &kp DLLR
+                                      &trans    &mo 5      &trans    &trans  &trans        &trans
             >;
         };
 
