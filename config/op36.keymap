@@ -115,6 +115,20 @@
             #binding-cells = <0>;
             bindings = <&kp RU_DOT>, <&kp RU_COMMA>;
         };
+
+        td_exq: td_exq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EXQ";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp QMARK>;
+        };
+
+        td_exq_ru: td_exq_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EXQ_RU";
+            #binding-cells = <0>;
+            bindings = <&kp RU_EXCL>, <&kp RU_QMARK>;
+        };
     };
 
     combos {
@@ -210,8 +224,8 @@
         sym_eng {
             bindings = <
   &none     &kp EQUAL  &kp LT         &kp GT    &kp GRAVE                    &kp CARET     &td_quotes_left  &td_quotes_right  &kp UNDER   &none
-  &kp BSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT     &kp SQT          &kp DQT           &td_colons  &kp EXCL
-  &kp HASH  &kp STAR   &en RU_NUMERO  &kp FSLH  &kp AT                       &td_dotcomma  &kp PIPE         &kp TILDE         &kp AMPS    &kp DLLR
+  &kp FSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT     &kp SQT          &kp DQT           &td_colons  &td_exq
+  &kp HASH  &kp STAR   &en RU_NUMERO  &kp NUBS  &kp AT                       &td_dotcomma  &kp PIPE         &kp TILDE         &kp AMPS    &kp DLLR
                                       &trans    &mo 5      &trans    &trans  &trans        &trans
             >;
         };
@@ -219,8 +233,8 @@
         sym_ru {
             bindings = <
   &none     &kp EQUAL  &en LT         &en GT    &en GRAVE                    &en CARET        &td_quotes_left_ru  &td_quotes_right_ru  &kp UNDER      &none
-  &kp BSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT        &en SQT             &en DQT              &td_colons_ru  &kp EXCL
-  &en HASH  &kp STAR   &kp RU_NUMERO  &en FSLH  &en AT                       &td_dotcomma_ru  &en PIPE            &en TILDE            &en AMPS       &en DLLR
+  &en FSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT        &en SQT             &en DQT              &td_colons_ru  &td_exq_ru
+  &en HASH  &kp STAR   &kp RU_NUMERO  &en BSLH  &en AT                       &td_dotcomma_ru  &en PIPE            &en TILDE            &en AMPS       &en DLLR
                                       &trans    &mo 5      &trans    &trans  &trans           &trans
             >;
         };
