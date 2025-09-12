@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COLONS_RU";
             #binding-cells = <0>;
-            bindings = <&en COLON>, <&en SEMI>;
+            bindings = <&kp RU_COLON>, <&kp RU_SEMICOLON>;
         };
 
         td_dotcomma: td_dotcomma {
