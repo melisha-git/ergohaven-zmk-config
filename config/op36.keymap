@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_QUOTES_LEFT_RU";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+            bindings = <&en LBRC>, <&en LBKT>;
         };
 
         td_quotes_right_ru: td_quotes_right_ru {
@@ -178,11 +178,11 @@
             #binding-cells = <1>;
             bindings =
                 <&change_lang>,
-                <&macro_wait_time 5>,
+                <&macro_wait_time 10>,
                 <&macro_param_1to1>,
-                <&macro_wait_time 5>,
+                <&macro_wait_time 10>,
                 <&kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 5>,
+                <&macro_wait_time 10>,
                 <&change_lang>;
 
             label = "EN";
