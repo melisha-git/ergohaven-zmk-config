@@ -178,11 +178,11 @@
             #binding-cells = <1>;
             bindings =
                 <&change_lang>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 15>,
                 <&macro_param_1to1>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 15>,
                 <&kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 15>,
                 <&change_lang>;
 
             label = "EN";
@@ -232,10 +232,10 @@
 
         sym_ru {
             bindings = <
-  &none     &kp EQUAL  &en LT         &en GT    &en GRAVE                    &en CARET        &td_quotes_left_ru  &td_quotes_right_ru  &kp UNDER      &none
-  &en FSLH  &kp MINUS  &kp LPAR       &kp RPAR  &kp PLUS                     &kp PRCNT        &en SQT             &en DQT              &td_colons_ru  &td_exq_ru
-  &en HASH  &kp STAR   &kp RU_NUMERO  &en BSLH  &en AT                       &td_dotcomma_ru  &en PIPE            &en TILDE            &en AMPS       &en DLLR
-                                      &trans    &mo 5      &trans    &trans  &trans           &trans
+  &none         &kp EQUAL  &en LT         &en GT       &en GRAVE                    &en CARET        &td_quotes_left_ru  &td_quotes_right_ru  &kp UNDER      &none
+  &kp RU_SLASH  &kp MINUS  &kp LPAR       &kp RPAR     &kp PLUS                     &kp RU_PRCNT     &en SQT             &kp RU_DQT           &td_colons_ru  &td_exq_ru
+  &en HASH      &kp STAR   &kp RU_NUMERO  &kp RU_BSLH  &en AT                       &td_dotcomma_ru  &en PIPE            &en TILDE            &en AMPS       &en DLLR
+                                          &trans       &mo 5      &trans    &trans  &trans           &trans
             >;
         };
 
