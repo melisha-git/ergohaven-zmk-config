@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_QUOTES_LEFT_RU";
             #binding-cells = <0>;
-            bindings = <&en LBRC>, <&en LBKT>;
+            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
         };
 
         td_quotes_right_ru: td_quotes_right_ru {
